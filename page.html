@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отслеживание работы</title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="container_h1">Учет сделанных работ</h1>
+
+        <form id="work-form">
+            <div class="form-group">
+                <label for="full-name">Ф.И.О:</label>
+                <input type="text" id="full-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Дата:</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="work-description">Сделанная работа:</label>
+                <textarea id="work-description" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Цех:</label>
+                <input type="text" id="department" required>
+            </div>
+
+            <div class="form-group">
+                <label for="start-time">Начало:</label>
+                <input type="time" id="start-time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="end-time">Конец:</label>
+                <input type="time" id="end-time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time-spent">Расход времени/минут:</label>
+                <input type="number" id="time-spent" required>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Статус:</label>
+                <select id="status" class="form_select" required>
+                    <option value="Не выбрано" selected>Не выбрано</option>
+                    <option value="Завершён">Завершён</option>
+                    <option value="Отложен">Отложен</option>
+                </select>
+            </div>
+
+            <button type="submit" class="button_green">Добавить работу</button>
+            <a type="button" class="button_red" href="#!">Выйт из аккаунт</a>
+        </form>
+
+        <table id="work-table" class="work_table_border">
+            <thead>
+                <tr>
+                    <th class="th_text">Ф.И.О</th>
+                    <th class="th_text">Дата</th>
+                    <th class="th_text">Сделанная работа</th>
+                    <th class="th_text">Цех</th>
+                    <th class="th_text">Начало</th>
+                    <th class="th_text">Конец</th>
+                    <th class="th_text">Расход времени/минут</th>
+                    <th class="th_text">Статус</th>
+                    <th class="th_text">Изменить работ</th>
+                    <th class="th_text">Удалить работ</th>
+                    <!-- <th></th>
+                    <th></th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic content will be added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
